@@ -1,9 +1,13 @@
-const calculator = {
-    plus: function(a, b){
-        return a + b;
-    }
+const title = document.querySelector("#title");
+
+const CLICKED_CLASS = "clicked";
+
+function handleClick(){
+    title.classList.toggle(CLICKED_CLASS);
 }
 
-//console.log(greentNicolas)
-const plus = calculator.plus(5, 5)
-console.log(plus)
+function init(){
+    title.addEventListener("click", handleClick);
+}
+init();
+
