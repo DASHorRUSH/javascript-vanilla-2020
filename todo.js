@@ -6,8 +6,6 @@ const TODOS_LS = "toDos";
 
 let toDos = [];
 
-
-
 function deleteToDo(event){
     const btn = event.target;
     const li = btn.parentNode;
@@ -51,15 +49,13 @@ function handleSubmit(event){
     toDoInput.value = "";
 }
 
-
-
 function loadToDos() {
     const loadedToDos = localStorage.getItem(TODOS_LS);
     if(loadedToDos !== null) {
         const parsedToDos = JSON.parse(loadedToDos);
         parsedToDos.forEach(function(toDo){
             paintToDo(toDo.text);
-        });
+        }); 
     }
 }
 
